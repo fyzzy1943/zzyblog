@@ -36,3 +36,48 @@ Route::get('id/{ida}/name/{aa}', function($id, $aa){
 Route::any('user/{ida}/profile', ['as'=>'profile', function($id){
     return 'profile'.$id;
 }]);
+
+Route::group(['middleware'=>'auth'], function(){
+    Route::get('/cla', function(){
+        return 'fffdsa';
+    });
+});
+
+Route::any('/cla/cla', function(){
+    print_r(\App\Http\Middleware\Authenticate::class) ;
+//     abort(404);
+});
+
+Route::get('my/{ida?}', ['uses'=>'MyController\ControllerTest@index','middleware'=>'tes']);
+
+Route::get('myt', ['uses'=>'ControllerTest@index', 'as'=>'myt']);
+
+Route::get('myaa', function(){
+    return redirect('index')->with('status', 'success')->withCookie('name', 'newbee');
+});
+
+Route::get('index', function(){
+    return view('index\index')->with('name', '测试');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
