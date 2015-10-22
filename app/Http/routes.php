@@ -60,9 +60,9 @@ Route::get('index', function(){
     return view('index\index')->with('name', '测试');
 });
 
+Route::get('ModelTest', 'ModelTest@index');
 
-
-
+Route::get('consumer', 'Consumer@register');
 
 
 
