@@ -12,6 +12,7 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $middleware = [
+//        '\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode',
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
         \App\Http\Middleware\EncryptCookies::class,
         \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
@@ -30,5 +31,6 @@ class Kernel extends HttpKernel
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'tes'=>\App\Http\Middleware\MiddlewareTest::class,
+
     ];
 }

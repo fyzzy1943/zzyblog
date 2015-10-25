@@ -57,6 +57,7 @@ Route::get('myaa', function(){
 });
 
 Route::get('index', function(){
+    return var_dump(\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class);
     return view('index\index')->with('name', '测试');
 });
 
