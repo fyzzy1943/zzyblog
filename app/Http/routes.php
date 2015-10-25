@@ -82,3 +82,4 @@ Route::get('consumer', 'Consumer@register');
 
 
 
+
