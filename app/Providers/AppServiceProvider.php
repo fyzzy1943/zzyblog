@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\DB;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,6 +15,11 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        DB::listen(function($sql, $bindings, $time){
+            var_dump($sql);
+            var_dump($bindings);
+            var_dump($time);
+        });
     }
 
     /**
