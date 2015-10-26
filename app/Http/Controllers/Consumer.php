@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use Carbon\Carbon;
-use Illuminate\Http\Request;
-use App\Http\Requests;
+use Request;
 use App\Http\Controllers\Controller;
 
 class Consumer extends Controller
@@ -15,5 +14,11 @@ class Consumer extends Controller
         Carbon::now();
         return view('consumer/reg');
 
+    }
+
+    function create()
+    {
+        $request=Request::all();
+        var_dump($request);
     }
 }

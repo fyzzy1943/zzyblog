@@ -65,7 +65,7 @@ Route::get('ModelTest', 'ModelTest@index');
 
 Route::get('consumer', 'Consumer@register');
 
-
+Route::any('consumer/p', 'Consumer@create');
 
 
 
