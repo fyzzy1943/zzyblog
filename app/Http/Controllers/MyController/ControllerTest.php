@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers\MyController;
 
-use Illuminate\Http\Request;
-use App\Http\Requests;
+use Request;
 use App\Http\Controllers\Controller;
 
 class ControllerTest extends Controller

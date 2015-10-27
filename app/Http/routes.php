@@ -65,17 +65,21 @@ Route::get('ModelTest', 'ModelTest@index');
 
 Route::get('consumer', 'Consumer@register');
 
-Route::any('consumer/p', 'Consumer@create');
+Route::any('consumer/p', 'Consumer@t1');
 
+Route::get('cone', function(){
+    return view('consumer.register');
+});
 
+Route::post('cone/register', function(){
+    var_dump(Request::all());
+});
 
+Route::get('auth/register', 'Auth\AuthController@getRegister');
 
+Route::post('auth/register', 'Auth\AuthController@postRegister');
 
-
-
-
-
-
+Route::any('consumer/t2', 'Consumer@t2');
 
 
 

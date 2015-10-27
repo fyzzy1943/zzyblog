@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Carbon\Carbon;
-use Request;
+use Illuminate\Http\Request;
+use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 
@@ -20,9 +21,14 @@ class Consumer extends Controller
 
     }
 
-    function create()
+    function t1(Request $request)
     {
-        $request=Request::all();
-        var_dump($request);
+//        $request=Request::all();
+        var_dump($request->all());
+    }
+
+    function t2()
+    {
+
     }
 }

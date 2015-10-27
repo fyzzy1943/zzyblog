@@ -21,7 +21,7 @@
         <div class="col-md-12">
             {{--{{ var_dump(action('ControllerTest@index')) }}--}}
             <form class="form" action="consumer/p" method="post">
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                {!! csrf_field() !!}
                 <input type="text" name="user"/><br/>
                 <input type="text" name="pass"/><br/>
 

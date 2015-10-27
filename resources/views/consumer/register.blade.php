@@ -16,6 +16,14 @@
   </head>
   <body>
     <h1>helloWorld</h1>
+    <form method="post" action="/cone/register">
+      {!! csrf_field() !!}
+      <div>Name:<input type="text" name="name" value="{{ old('name') }}"/></div>
+      <div>Email:<input type="email" name="email" value="{{ old('email') }}"/></div>
+      <div>Password:<input type="password" name="password"/></div>
+      <div>Confirm Password:<input type="password" name="password_confirmation"/></div>
+      <div><button type="submit">Register</button></div>
+    </form>
 
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
