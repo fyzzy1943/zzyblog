@@ -16,9 +16,9 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         DB::listen(function($sql, $bindings, $time){
-            var_dump($sql);
-            var_dump($bindings);
-            var_dump($time);
+//            var_dump($sql);
+//            var_dump($bindings);
+//            var_dump($time);
         });
     }
 

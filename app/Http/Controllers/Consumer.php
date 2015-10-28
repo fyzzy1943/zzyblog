@@ -25,10 +25,20 @@ class Consumer extends Controller
     {
 //        $request=Request::all();
         var_dump($request->all());
+//        var_dump(\App\Consumer::findOrFail(2)->toArray());
+        var_dump(\App\Consumer::all()->toArray());
+        $consumer=\App\Consumer::create($request->all());
+        echo 'start';
+        var_dump($consumer->toArray());
+        echo 'end';
     }
 
-    function t2()
+    function t2(Request $request, $ida='boss', $atra)
     {
-
+        var_dump($request->all());
+        var_dump($ida);
+        var_dump($atra);
+        dd($request->all(), $atra);
+        dd($atra);
     }
 }

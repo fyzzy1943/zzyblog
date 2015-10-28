@@ -22,7 +22,7 @@
             {{--{{ var_dump(action('ControllerTest@index')) }}--}}
             <form class="form" action="consumer/p" method="post">
                 {!! csrf_field() !!}
-                <input type="text" name="user"/><br/>
+                <input type="text" name="name"/><br/>
                 <input type="text" name="pass"/><br/>
 
                 <button type="submit">Submit</button>

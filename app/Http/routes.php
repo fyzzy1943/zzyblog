@@ -67,6 +67,10 @@ Route::get('consumer', 'Consumer@register');
 
 Route::any('consumer/p', 'Consumer@t1');
 
+Route::get('consumer/p/{id}', function($id){
+    echo App\Consumer::findOrFail($id);
+});
+
 Route::get('cone', function(){
     return view('consumer.register');
 });
@@ -79,11 +83,6 @@ Route::get('auth/register', 'Auth\AuthController@getRegister');
 
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
-Route::any('consumer/t2', 'Consumer@t2');
-
-
-
-
-
+Route::any('consumer/t2/{id?}/{atr}', 'Consumer@t2');
 
 
