@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Template</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style>
+        
+    </style>
+  </head>
+  <body>
+  <!-- resources/views/auth/login.blade.php -->
+
+  <form method="POST" action="/auth/login">
+    {!! csrf_field() !!}
+
+    <div>
+      Email
+      <input type="email" name="email" value="{{ old('email') }}">
+    </div>
+
+    <div>
+      Password
+      <input type="password" name="password" id="password">
+    </div>
+
+    <div>
+      <input type="checkbox" name="remember"> Remember Me
+    </div>
+
+    <div>
+      <button type="submit">Login</button>
+    </div>
+  </form>
+
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+            
+        });
+    </script>
+  </body>
+</html>
