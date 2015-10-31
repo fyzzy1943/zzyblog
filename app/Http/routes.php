@@ -85,4 +85,10 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 Route::any('consumer/t2/{id?}/{atr}', 'Consumer@t2');
 
+Route::get('/hello/laravel', ['as'=>'hello', function(){
+    return 'Hello Laravel';
+}]);
 
+Route::get('/testroute', function(){
+    return redirect()->route('hello');
+});

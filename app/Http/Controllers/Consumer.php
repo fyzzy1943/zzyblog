@@ -38,7 +38,15 @@ class Consumer extends Controller
         var_dump($request->all());
         var_dump($ida);
         var_dump($atra);
-        dd($request->all(), $atra);
-        dd($atra);
+        var_dump($request->method());
+        var_dump($request->url());
+        var_dump($request->fullUrl());
+        var_dump($request->get('aa'));
+        var_dump($request->input());
+        var_dump($request->input('aa'));
+        var_dump($request->get('id'));
+        var_dump(\App\Consumer::all()->toArray());
+//        dd($request->all(), $atra);
+//        dd($atra);
     }
 }
