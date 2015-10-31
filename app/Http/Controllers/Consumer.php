@@ -35,6 +35,7 @@ class Consumer extends Controller
 
     function t2(Request $request, $ida='boss', $atra)
     {
+        dd($request->session()->all());
         var_dump($request->all());
         var_dump($ida);
         var_dump($atra);
