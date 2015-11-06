@@ -98,3 +98,7 @@ Route::get('/hello/laravel', ['as'=>'hello', function(){
 Route::get('/testroute', function(){
     return redirect()->route('hello');
 });
+
+get('/lalala', function(){
+    return 'qweeee';
+});
