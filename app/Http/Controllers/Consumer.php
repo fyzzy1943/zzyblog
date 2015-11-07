@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use Auth;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Requests;
@@ -35,7 +37,7 @@ class Consumer extends Controller
 
     function t2(Request $request, $ida='boss', $atra)
     {
-        dd($request->session()->all());
+//        dd($request->session()->all());
         var_dump($request->all());
         var_dump($ida);
         var_dump($atra);
@@ -49,5 +51,16 @@ class Consumer extends Controller
         var_dump(\App\Consumer::all()->toArray());
 //        dd($request->all(), $atra);
 //        dd($atra);
+    }
+
+    function t3(Request $request)
+    {
+
+        if(Auth::attempt(['user'=>'admin', 'password'=>'admin'])){
+            echo 'success' .'<br/>';
+        }else{
+            echo 'failed', '<br/>';
+        }
+        return \Response('qwe刘嘉隆')->header('Content-Type','text/html;charset=utf-8');
     }
 }
