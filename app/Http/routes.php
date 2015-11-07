@@ -99,4 +99,8 @@ Route::get('/testroute', function(){
     return redirect()->route('hello');
 });
 
-Route::get('/consu', 'Consumer@t3');
+Route::get('/consu', 'Consumer@t3');});
+
+get('/lalala', function(){
+    return 'qweeee';
+});
